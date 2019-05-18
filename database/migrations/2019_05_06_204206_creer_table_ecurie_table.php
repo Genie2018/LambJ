@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableFournisseurTable extends Migration
+class CreerTableEcurieTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTableFournisseurTable extends Migration
      */
     public function up()
     {
-        Schema::create('table_fournisseur', function (Blueprint $table) {
-            $table->increments('fournisseur_id');
-            $table->string('fournisseur_nom');
-            $table->string('fournisseur_description');
+        Schema::create('table_ecurie', function (Blueprint $table) {
+            $table->bigIncrements('ecurie_id');
+            $table->string('ecurie_nom');
+            $table->string('ecurie_description');
             $table->integer('publication_status');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateTableFournisseurTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_fournisseur');
+        Schema::dropIfExists('table_ecurie');
     }
 }

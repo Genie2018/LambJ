@@ -218,14 +218,14 @@
                             <div class="panel panel-default">
                                 
                            <?php 
-                                $toute_publication_categorie=DB::table('table_categorie')
+                                $toute_publication_ecurie=DB::table('table_ecurie')
                                         ->where('publication_status',1)
                                         ->get();
                             
-                                       foreach($toute_publication_categorie as $v_categorie){?>   
+                                       foreach($toute_publication_ecurie as $v_ecurie){?>   
                                 <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a href="#">{{$v_categorie->categorie_nom}}</a></h4>
+                                    <h4 class="panel-title"><a href="#">{{$v_ecurie->ecurie_nom}}</a></h4>
                                 </div>
                             </div>
                              <?php } ?>

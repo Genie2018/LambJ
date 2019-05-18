@@ -10,14 +10,14 @@
 				</li>
 				<li>
 					<i class="icon-edit"></i>
-					<a href="#">Ajouter une categorie</a>
+					<a href="#">Ajouter un promoteur</a>
 				</li>
 			</ul>
 			
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon edit"></i><span class="break"></span>Ajouter une categorie</h2>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Ajouter un promoteur</h2>
 						
 							<p class="alert-success">
 								<?php
@@ -33,23 +33,18 @@
 								
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" action="{{url('/sauvegarder-categorie')}}" method="post">
+						<form class="form-horizontal" action="{{url('/sauvegarder-promoteur')}}" method="post">
 							{{ csrf_field() }}
 						  <fieldset>
 							
 							<div class="control-group">
-							  <label class="control-label" for="date01">Nom Categorie</label>
+							  <label class="control-label" for="date01">Nom du promoteur</label>
 							  <div class="controls">
-								<input type="text" class="input-xlarge" name="categorie_nom" required="">
+								<input type="text" class="input-xlarge" name="promoteur_nom" required="">
 							  </div>
 							</div>
 					      
-							<div class="control-group hidden-phone">
-							  <label class="control-label" for="textarea2">categorie description</label>
-							  <div class="controls">
-								<textarea class="cleditor" name="categorie_description" required=""></textarea>
-							  </div>
-							</div>
+							
 							
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Publication status</label>
@@ -59,7 +54,7 @@
 							</div>
 
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Ajouter categorie</button>
+							  <button type="submit" class="btn btn-primary">Ajouter le promoteur</button>
 							  <button type="reset" class="btn">Annuler</button>
 							</div>
 						  </fieldset>

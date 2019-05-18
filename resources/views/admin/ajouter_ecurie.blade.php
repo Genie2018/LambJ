@@ -10,14 +10,14 @@
 				</li>
 				<li>
 					<i class="icon-edit"></i>
-					<a href="#">Modififer une categorie</a>
+					<a href="#">Ajouter une ecurie</a>
 				</li>
 			</ul>
 			
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon edit"></i><span class="break"></span>Modifier une categorie</h2>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Ajouter une ecurie</h2>
 						
 							<p class="alert-success">
 								<?php
@@ -33,26 +33,34 @@
 								
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" action="{{url('/modifier-categorie',$categorie_info->categorie_id)}}" method="post">
+						<form class="form-horizontal" action="{{url('/sauvegarder-ecurie')}}" method="post">
 							{{ csrf_field() }}
 						  <fieldset>
 							
 							<div class="control-group">
-							  <label class="control-label" for="date01">Nom Categorie</label>
+							  <label class="control-label" for="date01">Nom ecurie</label>
 							  <div class="controls">
-								<input type="text" class="input-xlarge" name="categorie_nom" value="{{$categorie_info->categorie_nom}}">
+								<input type="text" class="input-xlarge" name="ecurie_nom" required="">
 							  </div>
 							</div>
 					      
 							<div class="control-group hidden-phone">
-							  <label class="control-label" for="textarea2">categorie description</label>
+							  <label class="control-label" for="textarea2">ecurie description</label>
 							  <div class="controls">
-								<textarea class="cleditor" name="categorie_description" value="">{{$categorie_info->categorie_description}}</textarea>
+								<textarea class="cleditor" name="ecurie_description" required=""></textarea>
 							  </div>
 							</div>
 							
+							<div class="control-group hidden-phone">
+							  <label class="control-label" for="textarea2">Publication status</label>
+							  <div class="controls">
+								<input type="checkbox" name="publication_status" value="1">
+							  </div>
+							</div>
+
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Modifier la categorie</button>
+							  <button type="submit" class="btn btn-primary">Ajouter ecurie</button>
+							  <button type="reset" class="btn">Annuler</button>
 							</div>
 						  </fieldset>
 						</form>   

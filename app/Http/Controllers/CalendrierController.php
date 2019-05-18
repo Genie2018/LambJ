@@ -7,8 +7,9 @@ use DB;
 use App\Http\Requests;
 use Session;
 use Illuminate\Support\Facades\Redirect;
+session_start();
 
-class ProduitController extends Controller
+class CalendrierController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,43 +18,23 @@ class ProduitController extends Controller
      */
     public function index()
     {
-        return view('admin.ajouter_produit');
+        return view('admin.ajouter_calendrier');
     }
 
-    public function sauvegarder_produit(Request $request)
+     public function sauvegarder_calendrier(Request $request)
     {
         $data=array();
-        $data['produit_nom']=$request->produit_nom;
-        $data['categorie_id']=$request->categorie_id;
-        $data['fournisseur_id']=$request->fournisseur_id;        
-        $data['produit_court_desc']=$request->produit_court_desc;
-        $data['produit_long_desc']=$request->produit_long_desc;
-        $data['produit_prix']=$request->produit_prix;
-        $data['produit_size']=$request->produit_size;
-        $data['produit_couleur']=$request->produit_couleur;        
+        $data['calendrier_id']=$request->calendrier_id;
+        $data['promoteur_id']=$request->promoteur_id;
+        $data['lutteur1']=$request->lutteur1;
+        $data['lutteur2']=$request->lutteur2;
+        $data['stade']=$request->stade;
+        $data['date_combat']=$request->date_combat;
         $data['publication_status']=$request->publication_status;
 
-
-        $image=$request->file('produit_image');
-        if($image){
-            $image_name=str_random(20);
-            $ext=strtolower($image->getClientOriginalExtension());
-            $image_full_name=$image_name.'.'.$ext;
-            $upload_path='image/';
-            $image_url=$upload_path.$image_full_name;
-            $success=$image->move($upload_path,$image_full_name);
-
-            if($success){
-       $data['produit_image']=$image_url;
-       DB::table('table_produit')->insert($data);
-        Session::put('message','produit ajoutée avec sucess !!');
-        return Redirect::to('/ajouter-produit');
-            }
-        }
-        $data['produit_image']='';
-        DB::table('table_produit')->insert($data);
-        Session::put('message','produit ajoutée avec sucess sans image!!');
-        return Redirect::to('/ajouter-produit');
+        DB::table('table_calendrier')->insert($data);
+        Session::put('message',' Combat programmé avec sucess !!');
+        return Redirect::to('/ajouter-calendrier');
     }
 
     /**

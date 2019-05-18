@@ -336,19 +336,27 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li><a href="{{URL::to('/tableaudebord')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Tableau de bord</span></a></li>	
 						
-						<li><a href="{{URL::to('/toute-categorie')}}"><i class="icon-envelope"></i><span class="hidden-tablet"> Toutes les catégories</span></a></li>
-						<li><a href="{{URL::to('/ajouter-categorie')}}"><i class="icon-tasks"></i><span class="hidden-tablet">Ajouter une categorie</span></a></li>
+						<li><a href="{{URL::to('/toute-ecurie')}}"><i class="icon-envelope"></i><span class="hidden-tablet"> Toutes les ecuries</span></a></li>
+						<li><a href="{{URL::to('/ajouter-ecurie')}}"><i class="icon-tasks"></i><span class="hidden-tablet">Ajouter une ecurie</span></a></li>
 
-						<li><a href="{{URL::to('/tous-fournisseur')}}"><i class="icon-eye-open"></i><span class="hidden-tablet">Tous les fournisseurs</span></a></li>
-						<li><a href="{{URL::to('/ajouter-fournisseur')}}"><i class="icon-dashboard"></i><span class="hidden-tablet"> Ajouter fournisseur</span></a></li>
+						<li><a href="{{URL::to('/tous-promoteur')}}"><i class="icon-envelope"></i><span class="hidden-tablet"> Toutes les promoteurs</span></a></li>
+						<li><a href="{{URL::to('/ajouter-promoteur')}}"><i class="icon-tasks"></i><span class="hidden-tablet">Ajouter un promoteur</span></a></li>
+
+						
 
 						<li>
-							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">produit</span><span class="label label-important">Nouveau</span></a>
+							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">lutteur</span><span class="label label-important">Nouveau</span></a>
 							<ul>
-								<li><a class="submenu" href="{{URL::to('/ajouter-produit')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">Ajouter produit</span></a></li>
-								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet">Tous les produits</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/ajouter-lutteur')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">Ajouter lutteur</span></a></li>
+								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet">Tous les lutteurs</span></a></li>
 								
 							</ul>	
+							
+								<li><a class="submenu" href="{{URL::to('/ajouter-calendrier')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">Programmer un combat</span></a></li>
+								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet">Tous les combats</span></a></li>
+								
+							
+
 						</li>
 						<li><a href="form.html"><i class="icon-edit"></i><span class="hidden-tablet">Slider</span></a></li>
 						<li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Social Link</span></a></li>

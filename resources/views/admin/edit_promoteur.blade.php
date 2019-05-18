@@ -10,14 +10,14 @@
 				</li>
 				<li>
 					<i class="icon-edit"></i>
-					<a href="#">Modififer un fournisseur</a>
+					<a href="#">Modififer une promoteur</a>
 				</li>
 			</ul>
 			
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon edit"></i><span class="break"></span>Modifier un fournisseur</h2>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Modifier une promoteur</h2>
 						
 							<p class="alert-success">
 								<?php
@@ -33,26 +33,21 @@
 								
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" action="{{url('/modifier-fournisseur',$fournisseur_info->fournisseur_id)}}" method="post">
+						<form class="form-horizontal" action="{{url('/modifier-promoteur',$promoteur_info->promoteur_id)}}" method="post">
 							{{ csrf_field() }}
 						  <fieldset>
 							
 							<div class="control-group">
-							  <label class="control-label" for="date01">Nom fournisseur</label>
+							  <label class="control-label" for="date01">Nom promoteur</label>
 							  <div class="controls">
-								<input type="text" class="input-xlarge" name="fournisseur_nom" value="{{$fournisseur_info->fournisseur_nom}}">
+								<input type="text" class="input-xlarge" name="promoteur_nom" value="{{$promoteur_info->promoteur_nom}}">
 							  </div>
 							</div>
 					      
-							<div class="control-group hidden-phone">
-							  <label class="control-label" for="textarea2">fournisseur description</label>
-							  <div class="controls">
-								<textarea class="cleditor" name="fournisseur_description" value="">{{$fournisseur_info->fournisseur_description}}</textarea>
-							  </div>
-							</div>
+							
 							
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Modifier le fournisseur</button>
+							  <button type="submit" class="btn btn-primary">Modifier la promoteur</button>
 							</div>
 						  </fieldset>
 						</form>   
