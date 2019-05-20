@@ -11,7 +11,7 @@
 |
 */
 //Frontend site ..........
-Route::get('/','HomeController@index');
+Route::get('/','AdminController@index');
 
 
 
@@ -22,12 +22,11 @@ Route::get('/','HomeController@index');
 
 
 //Backend site...................................
-Route::get('/admin','AdminController@index');
 Route::get('/tableaudebord','AdminController@show_tableaudebord');
 Route::post('/admin-tableaudebord','AdminController@tableaudebord');
 Route::get('/deconnecter','SuperAdminController@deconnecter');
 
-//category related route
+//Ecurie Route
 Route::get('/ajouter-ecurie','ecurieController@index');
 Route::get('/toute-ecurie','ecurieController@toute_ecurie');
 Route::post('/sauvegarder-ecurie','ecurieController@sauvegarder_ecurie');
@@ -42,16 +41,22 @@ Route::get('/delete-ecurie/{ecurie_id}','ecurieController@delete_ecurie');
 //lutteur Routes
 Route::get('/ajouter-lutteur','LutteurController@index');
 Route::post('/sauvegarder-lutteur','LutteurController@sauvegarder_lutteur');
+Route::get('/tous-lutteur','LutteurController@tous_lutteur');
 
-//lister lutteur
-Route::get('/list','LutteurController@list');
 
 //Calendrier
 Route::get('/ajouter-calendrier','CalendrierController@index');
 Route::post('/sauvegarder-calendrier','CalendrierController@sauvegarder_calendrier');
+Route::get('/tous-combat','CalendrierController@tous_combat');
+Route::get('/edit-calendrier/{calendrier_id}','CalendrierController@edit_calendrier');
+Route::post('/modifier-calendrier/{calendrier_id}','CalendrierController@modifier_calendrier');
+Route::get('/delete-calendrier/{calendrier_id}','CalendrierController@delete_calendrier');
+Route::get('/inactive-calendrier/{calendrier_id}','CalendrierController@inactive_calendrier');
+Route::get('/active-calendrier/{calendrier_id}','CalendrierController@active_calendrier');
+
 
 //Promoteur
-//category related route
+
 Route::get('/ajouter-promoteur','PromoteurController@index');
 Route::get('/tous-promoteur','PromoteurController@tous_promoteur');
 Route::post('/sauvegarder-promoteur','PromoteurController@sauvegarder_promoteur');

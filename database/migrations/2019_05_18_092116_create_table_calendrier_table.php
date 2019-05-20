@@ -20,6 +20,8 @@ class CreateTableCalendrierTable extends Migration
             $table->integer('promoteur_id');
             $table->string('stade');
             $table->string('date');
+            $table->string('prix_decouvert');
+            $table->string('prix_vip');
             $table->integer('publication_status');
 
             $table->timestamps();

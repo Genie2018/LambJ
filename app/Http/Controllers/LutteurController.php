@@ -54,13 +54,21 @@ class LutteurController extends Controller
         return Redirect::to('/ajouter-lutteur');
     }
 
+           public function tous_lutteur()
+    {
+        $tous_lutteur_info=DB::table('table_lutteur')->get();
+        $manage_lutteur=view('admin.tous_lutteur')
+            ->with('tous_lutteur_info',$tous_lutteur_info);
+
+        return view('admin_layout')->with('admin.tous_lutteur',$manage_lutteur);
+    }
 
 
-            public function list(Request $request){
+            /*public function list(Request $request){
 
                 $lutteurs=DB::table('table_lutteur')->get();
                 return  response()->json($lutteurs,200);
-            }
+            }*/
     /**
      * Show the form for creating a new resource.
      *

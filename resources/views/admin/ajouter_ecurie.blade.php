@@ -47,7 +47,7 @@
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">ecurie description</label>
 							  <div class="controls">
-								<textarea class="cleditor" name="ecurie_description" required=""></textarea>
+								<input type="text" class="input-xlarge" name="ecurie_description" required="">
 							  </div>
 							</div>
 							

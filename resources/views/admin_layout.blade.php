@@ -4,7 +4,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Zone d'administration du site wanter</title>
+	<title>Zone d'administration du site LambJ</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
 	<meta name="author" content="Dennis Ji">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -52,7 +52,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>Wanter</span></a>
+				<a class="brand" href="index.html"><span>LambJ</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -348,12 +348,12 @@
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet">lutteur</span><span class="label label-important">Nouveau</span></a>
 							<ul>
 								<li><a class="submenu" href="{{URL::to('/ajouter-lutteur')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">Ajouter lutteur</span></a></li>
-								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet">Tous les lutteurs</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/tous-lutteur')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">Tous les lutteurs</span></a></li>
 								
 							</ul>	
 							
 								<li><a class="submenu" href="{{URL::to('/ajouter-calendrier')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">Programmer un combat</span></a></li>
-								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet">Tous les combats</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/tous-combat')}}"><i class="icon-file-alt"></i><span class="hidden-tablet">Tous les combats</span></a></li>
 								
 							
 

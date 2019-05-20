@@ -80,6 +80,18 @@
 								<input type="date" class="input-xlarge" name="date_combat" required="">
 							  </div>
 							</div>
+							<div class="control-group">
+							  <label class="control-label" for="date01">Prix Decouvert</label>
+							  <div class="controls">
+								<input type="text" class="input-xlarge" name="prix_decouvert" required="">
+							  </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="date01">Prix VIP</label>
+							  <div class="controls">
+								<input type="text" class="input-xlarge" name="prix_vip" required="">
+							  </div>
+							</div>
 
 							<div class="control-group hidden-phone">
 							  <label class="control-label" for="textarea2">Publication status</label>
